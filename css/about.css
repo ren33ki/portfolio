@@ -1,0 +1,485 @@
+@charset "UTF-8";
+/* ---------------------------
+* base
+* ---------------------------- */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+/* ---------------------------
+* layout
+* ---------------------------- */
+.sec-inner--m {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* ---------------------------
+* parts
+* ---------------------------- */
+.sec-title {
+  font-size: 3.2rem;
+  font-family: 'Montserrat';
+  margin-bottom: 31px;
+  font-weight: bold;
+}
+
+/* ---------------------------
+* header
+* ---------------------------- */
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 60px 30px 58px;
+}
+
+.site-logo {
+  width: 260px;
+}
+
+.site__link {
+  display: block;
+}
+
+.site__img {
+  width: 100%;
+}
+
+.header__nav {
+  position: fixed;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  top: 0;
+  right: -520px;
+  width: 520px;
+  background-color: rgba(34, 34, 34, 0.95);
+  text-align: center;
+  height: 100vh;
+  padding-top: 20vh;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__logo {
+  width: 42.15px;
+  margin-bottom: 44px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav__item {
+  margin-bottom: 34px;
+  font-size: 2rem;
+}
+
+.nav__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.6);
+  z-index: -1;
+  display: none;
+}
+
+.humberger {
+  width: 59px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.0rem;
+  font-family: 'Montserrat';
+  color: #fff;
+  cursor: pointer;
+  font-weight: 400;
+  z-index: 5;
+  position: relative;
+}
+
+.humberger__btn {
+  width: 22px;
+}
+
+.humberger__border {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.humberger__border--top {
+  margin-bottom: 2px;
+}
+
+.humberger__border--middle {
+  margin-bottom: 2px;
+}
+
+/* --- メニューが開いた時 --- */
+body.noscroll {
+  overflow: hidden;
+}
+
+.open .header__nav {
+  right: 0;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.open .humberger__border--top {
+  -webkit-transform: translateY(4px) rotate(30deg);
+          transform: translateY(4px) rotate(30deg);
+}
+
+.open .humberger__border--middle {
+  opacity: 0;
+}
+
+.open .humberger__border--bottom {
+  -webkit-transform: translateY(-4px) rotate(-30deg);
+          transform: translateY(-4px) rotate(-30deg);
+}
+
+/* ---------------------------
+* fv
+* ---------------------------- */
+.fv {
+  position: relative;
+  height: 464px;
+  margin-bottom: 126px;
+}
+
+.fv__bg-img {
+  width: 77%;
+  background: url(../img/heading-img@2x.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 1100px;
+  height: 387px;
+}
+
+.fv__bg-brack {
+  position: absolute;
+  width: 50vw;
+  height: 464px;
+  background-color: #000;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.fv__title {
+  position: absolute;
+  top: 50%;
+  right: 12vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.fv__sub-copy {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.fv__main-copy {
+  font-family: 'Montserrat';
+  font-size: 7.2rem;
+  line-height: 86px;
+  font-weight: bold;
+}
+
+/* ---------------------------
+* vision
+* ---------------------------- */
+.vision {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.vision__inner {
+  padding-left: 225px;
+}
+
+.vision__sub-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.vision__text {
+  margin-bottom: 40px;
+}
+
+/* ---------------------------
+* messaage
+* ---------------------------- */
+.message {
+  margin-bottom: 126px;
+}
+
+.message__inner {
+  position: relative;
+  padding-top: 144px;
+}
+
+.message__content {
+  margin-left: auto;
+  max-width: 70%;
+  padding-top: 126px;
+  padding-bottom: 185px;
+  background-color: #f0f0f0;
+  max-width: 70%;
+}
+
+.message__content-inner {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.message__text {
+  margin-bottom: 40px;
+}
+
+.message__img-wrap {
+  width: 38%;
+  min-width: 380px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+
+/* ---------------------------
+* introduce
+* ---------------------------- */
+.introduce {
+  margin-bottom: 120px;
+}
+
+.introduce__title {
+  margin-bottom: 0;
+}
+
+.introduce__title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #ddd;
+  margin-top: 31px;
+}
+
+.introduce__content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+dl {
+  overflow-y: auto;
+}
+
+dt {
+  position: absolute;
+  height: 56px;
+  line-height: 56px;
+}
+
+dd {
+  padding-left: 144px;
+  height: 56px;
+  line-height: 56px;
+  border-bottom: 1px solid #ddd;
+}
+
+iframe {
+  width: 100%;
+  height: 360px;
+}
+
+/* ---------------------------
+* footer
+* ---------------------------- */
+.footer {
+  background-color: #525252;
+  text-align: center;
+  color: #fff;
+}
+
+.footer__copy {
+  line-height: 50px;
+}
+
+/* ---------------------------
+* tablet
+* ---------------------------- */
+@media screen and (max-width: 768px) {
+  /* ---------------------------
+  * base__tb
+  * ---------------------------- */
+  .sec-inner--m {
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
+  /* ---------------------------
+  * header__tb
+  * ---------------------------- */
+  .header {
+    padding: 33.8px 4vw 33.8px 4vw;
+  }
+  .site-logo {
+    width: 189px;
+  }
+  .site-logo__link {
+    display: block;
+    width: 100%;
+  }
+  /* ---------------------------
+  * fv__tb
+  * ---------------------------- */
+  .fv {
+    height: 615px;
+    margin-bottom: 86px;
+  }
+  .fv__bg-img {
+    height: 529px;
+  }
+  .fv__bg-brack {
+    height: 615px;
+  }
+  .fv__sub-copy {
+    font-size: 1.6rem;
+  }
+  .fv__main-copy {
+    font-size: 5.2rem;
+  }
+  /* ---------------------------
+  * vision__tb
+  * ---------------------------- */
+  .vision {
+    margin-bottom: 80px;
+  }
+  .vision__inner {
+    padding-left: 120px;
+  }
+  .vision__sub-title {
+    font-weight: normal;
+  }
+  .vision__text {
+    font-size: 1.4rem;
+  }
+  /* ---------------------------
+  * message__tb
+  * ---------------------------- */
+  .message {
+    margin-bottom: 88px;
+  }
+  .message__content {
+    max-width: 415px;
+    padding: 115px 39px 78px 40px;
+  }
+  .message__content-inner {
+    max-width: 288px;
+  }
+  .message__img-wrap {
+    width: 320px;
+    min-width: 0px;
+    left: 4vw;
+  }
+  /* ---------------------------
+  * introduce__tb
+  * ---------------------------- */
+  .introduce {
+    margin-bottom: 80px;
+  }
+}
+
+/* ---------------------------
+* navレスポンシブ
+* ---------------------------- */
+@media screen and (max-width: 568px) {
+  .header__nav {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+/* ---------------------------
+* sp
+* ---------------------------- */
+@media screen and (max-width: 375px) {
+  /* ---------------------------
+  * header__sp
+  * ---------------------------- */
+  .header {
+    padding-top: 19.8px;
+    padding-bottom: 19.8px;
+  }
+  /* ---------------------------
+  * fv__sp
+  * ---------------------------- */
+  .fv {
+    height: 449px;
+  }
+  .fv__bg-img {
+    height: 387px;
+  }
+  .fv__bg-brack {
+    height: 449px;
+  }
+  /* ---------------------------
+  * vision__sp
+  * ---------------------------- */
+  .vision__inner {
+    padding-left: 0;
+  }
+  /* ---------------------------
+  * message__sp
+  * ---------------------------- */
+  .message__img-wrap {
+    left: 0;
+  }
+  /* ---------------------------
+  * introduce__sp
+  * ---------------------------- */
+  iframe {
+    height: 470px;
+  }
+}

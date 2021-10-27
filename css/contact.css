@@ -1,0 +1,506 @@
+@charset "UTF-8";
+/* ---------------------------
+* base
+* ---------------------------- */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+/* ---------------------------
+* header
+* ---------------------------- */
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 60px 30px 58px;
+}
+
+.site-logo {
+  width: 260px;
+}
+
+.site__link {
+  display: block;
+}
+
+.site__img {
+  width: 100%;
+}
+
+.header__nav {
+  position: fixed;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  top: 0;
+  right: -520px;
+  width: 520px;
+  background-color: rgba(34, 34, 34, 0.95);
+  text-align: center;
+  height: 100vh;
+  padding-top: 20vh;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__logo {
+  width: 42.15px;
+  margin-bottom: 44px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav__item {
+  margin-bottom: 34px;
+  font-size: 2rem;
+}
+
+.nav__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.6);
+  z-index: -1;
+  display: none;
+}
+
+.humberger {
+  width: 59px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.0rem;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+}
+
+.humberger__btn {
+  width: 22px;
+}
+
+.humberger__border {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.humberger__border--top {
+  margin-bottom: 2px;
+}
+
+.humberger__border--middle {
+  margin-bottom: 2px;
+}
+
+/* --- メニューが開いた時 --- */
+body.noscroll {
+  overflow: hidden;
+}
+
+.open .header__nav {
+  right: 0;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.open .humberger__border--top {
+  -webkit-transform: translateY(4px) rotate(30deg);
+          transform: translateY(4px) rotate(30deg);
+}
+
+.open .humberger__border--middle {
+  opacity: 0;
+}
+
+.open .humberger__border--bottom {
+  -webkit-transform: translateY(-4px) rotate(-30deg);
+          transform: translateY(-4px) rotate(-30deg);
+}
+
+/* ---------------------------
+* fv
+* ---------------------------- */
+.fv {
+  position: relative;
+  height: 464px;
+  margin-bottom: 126px;
+}
+
+.fv__bg-img {
+  width: 77%;
+  background: url(../img/heading-img@2x.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 1100px;
+  height: 387px;
+}
+
+.fv__bg-brack {
+  position: absolute;
+  width: 50vw;
+  height: 464px;
+  background-color: #000;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.fv__title {
+  position: absolute;
+  top: 50%;
+  right: 12vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.fv__sub-copy {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.fv__main-copy {
+  font-family: 'Montserrat';
+  font-size: 7.2rem;
+  line-height: 86px;
+  font-weight: bold;
+}
+
+/* ---------------------------
+* content
+* ---------------------------- */
+.content {
+  max-width: 730px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.content__text {
+  margin-bottom: 55px;
+  letter-spacing: -0.2px;
+}
+
+/* ---------------------------
+* form
+* ---------------------------- */
+.content__form {
+  margin-bottom: 120px;
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.label__need::after {
+  content: '必須';
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  padding-right: 5px;
+  padding-left: 5px;
+  height: 18px;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.form__item {
+  margin-bottom: 40px;
+}
+
+.form__radio-list {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__radio-item {
+  margin-right: 50px;
+}
+
+.form__radio-item:last-of-type {
+  margin-right: 0;
+}
+
+.form__radio {
+  display: none;
+}
+
+.radio__label {
+  padding-left: 30px;
+  position: relative;
+}
+
+.radio__label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #707070;
+  border-radius: 50%;
+}
+
+.form__radio:checked + .radio__label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+.form__input {
+  width: 100%;
+  height: 41px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #333333;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 212px;
+  border: 1px solid #333333;
+  padding: 10px;
+  outline: none;
+}
+
+.form__term-title {
+  font-family: 'Montserrat';
+  margin-bottom: 10px;
+}
+
+.form__term-text {
+  width: 100%;
+  height: 252px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #333333;
+  font-family: 'Noto Sans JP';
+}
+
+.form__agree {
+  margin-bottom: 41px;
+  text-align: center;
+}
+
+.agree__checkbox {
+  display: none;
+}
+
+.agree__label {
+  padding-left: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.agree__label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #707070;
+}
+
+.agree__checkbox:checked + .agree__label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 50%;
+  left: 3px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../img/icon_chek.svg) no-repeat;
+}
+
+.form__btn {
+  display: block;
+  width: 160px;
+  height: 36px;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 36px;
+  margin: 0 auto;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form__btn:hover {
+  opacity: 0.6;
+}
+
+.footer {
+  background-color: #525252;
+  text-align: center;
+  color: #fff;
+}
+
+.footer__copy {
+  line-height: 50px;
+}
+
+/* ---------------------------
+* tablet
+* ---------------------------- */
+@media screen and (max-width: 768px) {
+  /* ---------------------------
+  * base__tb
+  * ---------------------------- */
+  .sec-inner--m {
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
+  /* ---------------------------
+  * header__tb
+  * ---------------------------- */
+  .header {
+    padding: 33.8px 4vw 33.8px 4vw;
+  }
+  .site-logo {
+    width: 189px;
+  }
+  .site-logo__link {
+    display: block;
+    width: 100%;
+  }
+  /* ---------------------------
+  * fv__tb
+  * ---------------------------- */
+  .fv {
+    height: 615px;
+    margin-bottom: 86px;
+  }
+  .fv__bg-img {
+    height: 529px;
+  }
+  .fv__bg-brack {
+    height: 615px;
+  }
+  .fv__sub-copy {
+    font-size: 1.6rem;
+  }
+  .fv__main-copy {
+    font-size: 5.2rem;
+  }
+  /* ---------------------------
+  * form__tb
+  * ---------------------------- */
+  .content__form {
+    margin-bottom: 197px;
+  }
+}
+
+/* ---------------------------
+* navレスポンシブ
+* ---------------------------- */
+@media screen and (max-width: 568px) {
+  .header__nav {
+    width: 100%;
+    right: -100%;
+  }
+  /* ---------------------------
+  * form
+  * ---------------------------- */
+  .form__radio-list {
+    display: block;
+  }
+  .form__radio-item {
+    margin-bottom: 15px;
+  }
+}
+
+/* ---------------------------
+* sp
+* ---------------------------- */
+@media screen and (max-width: 375px) {
+  /* ---------------------------
+  * header__sp
+  * ---------------------------- */
+  .header {
+    padding-top: 19.8px;
+    padding-bottom: 19.8px;
+  }
+  /* ---------------------------
+  * fv__sp
+  * ---------------------------- */
+  .fv {
+    height: 449px;
+  }
+  .fv__bg-img {
+    height: 387px;
+  }
+  .fv__bg-brack {
+    height: 449px;
+  }
+  /* ---------------------------
+  * form__sp
+  * ---------------------------- */
+  .form__radio-list {
+    display: block;
+  }
+}
